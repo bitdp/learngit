@@ -1,4 +1,4 @@
-package com.example.dongpeng.myfirst;
+package com.example.dongpeng.myapplication;
 
 import org.junit.Test;
 

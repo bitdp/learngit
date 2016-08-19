@@ -1,4 +1,4 @@
-package com.example.dongpeng.myfirst;
+package com.example.dongpeng.myapplication;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
