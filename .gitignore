@@ -1,1 +1,3 @@
 *.bak
+MyApplication/.gradle/
+MyApplication/build/
