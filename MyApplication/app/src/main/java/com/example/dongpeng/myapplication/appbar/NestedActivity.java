@@ -1,32 +1,32 @@
-package com.example.dongpeng.myapplication.tab_viewpager;
+package com.example.dongpeng.myapplication.appbar;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-
 import com.example.dongpeng.myapplication.R;
-
+import com.example.dongpeng.myapplication.tab_viewpager.MyFragment;
+import com.example.dongpeng.myapplication.tab_viewpager.MyVPAdapter;
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by dongpeng on 2016/8/19.
+ * Created by dongpeng on 2016/8/24.
  */
-public class Tab_ViewPager_Activity extends Activity {
+public class NestedActivity extends Activity {
     List<String> titles=new ArrayList<>();
     List<MyFragment> fragments=new ArrayList<>();
+    @BindView(R.id.tabLayout)
+    TabLayout tabLayout;
     @BindView(R.id.vp)
     ViewPager vp;
-    @BindView(R.id.tabLayout)TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tablayout_vp);
+        setContentView(R.layout.appbar_layout);
         ButterKnife.bind(this);
         initTitle();
         initFragment();

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/beijing"
+        android:icon="@mipmap/a"
+        android:title="北京"></item>
+    <item
+        android:id="@+id/shanghai"
+        android:icon="@mipmap/b"
+        android:title="上海"></item>
+<!--    <item
+        android:id="@+id/shenzhen"
+        android:icon="@mipmap/a"
+        android:title="深圳"></item>
+    <item
+        android:id="@+id/guangzhou"
+        android:icon="@mipmap/b"
+        android:title="广州"></item>-->
+</menu>
