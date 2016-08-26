@@ -30,9 +30,6 @@ public class Tab_ViewPager_Activity extends Activity {
         ButterKnife.bind(this);
         initTitle();
         initFragment();
-//        for (int i=0;i<9;i++){
-//            tabLayout.addTab(tabLayout.newTab().setText(titles.get(i)));
-//        }
         vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         MyVPAdapter myVPAdapter=new MyVPAdapter(getFragmentManager(),titles,fragments);
         vp.setAdapter(myVPAdapter);

@@ -9,12 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/button_tab"
-            android:textAllCaps="false"
-            android:text="TabLayout+ViwePager"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="TabLayout+ViwePager"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/button_rx"
@@ -22,11 +23,39 @@
             android:layout_height="wrap_content"
             android:text="RxJava"
             android:textAllCaps="false" />
+
         <Button
             android:id="@+id/button_fresco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fresco"
+            android:text="Fresco加载图片"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_immergestate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="浸入式状态栏"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_bottomdialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BottomSheetDialog"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AppBar+TabLayout+ViewPager"
+            android:textAllCaps="false" />
+    <Button
+            android:id="@+id/button_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="属性动画"
             android:textAllCaps="false" />
     </LinearLayout>
 </ScrollView>

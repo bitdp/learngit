@@ -31,6 +31,18 @@
         <activity
             android:name=".fresco.FrescoActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".immergestate.ImmergestateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottomsheet.BottomSheetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appbar.NestedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".animation.PropertyAnimationActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

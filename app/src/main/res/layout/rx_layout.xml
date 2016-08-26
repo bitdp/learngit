@@ -10,5 +10,22 @@
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        android:textSize="17sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button_debounce"
+        android:text="实时搜索，时间过滤"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
