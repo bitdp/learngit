@@ -17,6 +17,7 @@ public class MyAnimatorView extends View {
     Paint mPaint;
     public MyAnimatorView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        point = new Point(RADIUS, RADIUS);
         mPaint=new Paint();
         mPaint.setColor(Color.BLUE);
         mPaint.setAntiAlias(true);
@@ -25,12 +26,13 @@ public class MyAnimatorView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if (point==null) {
-            point = new Point(RADIUS, RADIUS);
-            canvas.drawCircle(point.getX(), point.getY(), RADIUS, mPaint);
-        }else {
-            canvas.drawCircle(point.getX(), point.getY(), RADIUS, mPaint);
-        }
+//        if (point==null) {
+//            point = new Point(RADIUS, RADIUS);
+//            canvas.drawCircle(point.getX(), point.getY(), RADIUS, mPaint);
+//        }else {
+//            canvas.drawCircle(point.getX(), point.getY(), RADIUS, mPaint);
+//        }
+        canvas.drawCircle(point.getX(), point.getY(), RADIUS, mPaint);
     }
 
 
