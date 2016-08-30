@@ -1,5 +1,6 @@
 package com.example.dongpeng.myapplication.animation;
 
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.os.Bundle;
@@ -39,13 +40,13 @@ public class PropertyAnimationActivity extends Activity {
                 break;
             case R.id.button:
                 ObjectAnimator animator1=ObjectAnimator.ofObject(myAnimatorView,"point",new MyTypeEvaluator(),new Point(50,50),new Point(720,1000));
-                animator1.setDuration(5000);
-                animator1.start();
-//                ObjectAnimator animator2=ObjectAnimator.ofObject(myAnimatorView,"color",new MyColorTypeEvaluator(),"#ff00ff","#00ff00");
-//                AnimatorSet set=new AnimatorSet();
-//                set.play(animator1).with(animator2);
-//                set.setDuration(5000);
-//                set.start();
+//                animator1.setDuration(5000);
+//                animator1.start();
+                ObjectAnimator animator2=ObjectAnimator.ofObject(myAnimatorView,"color",new MyColorTypeEvaluator(),"#ff00ff","#00ff00");
+                AnimatorSet set=new AnimatorSet();
+                set.play(animator1).with(animator2);
+                set.setDuration(5000);
+                set.start();
                 break;
 
         }

@@ -43,6 +43,12 @@
         <activity
             android:name=".animation.PropertyAnimationActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventbus.FirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventbus.SecondActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

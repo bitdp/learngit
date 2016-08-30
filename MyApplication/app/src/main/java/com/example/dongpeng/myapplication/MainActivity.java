@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.example.dongpeng.myapplication.animation.PropertyAnimationActivity;
 import com.example.dongpeng.myapplication.appbar.NestedActivity;
 import com.example.dongpeng.myapplication.bottomsheet.BottomSheetActivity;
+import com.example.dongpeng.myapplication.eventbus.FirstActivity;
 import com.example.dongpeng.myapplication.fresco.FrescoActivity;
 import com.example.dongpeng.myapplication.immergestate.ImmergestateActivity;
 import com.example.dongpeng.myapplication.rxjava.activity.RxBusActivity;
@@ -33,6 +34,8 @@ public class MainActivity extends Activity {
     Button buttonAppBar;
     @BindView(R.id.button_animation)
     Button buttonAnimation;
+    @BindView(R.id.button_databinding)
+    Button buttonDatabinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,7 @@ public class MainActivity extends Activity {
 
 
     @OnClick({R.id.button_tab, R.id.button_rx, R.id.button_fresco, R.id.button_immergestate, R.id.button_bottomdialog,
-            R.id.button_appBar,R.id.button_animation})
+            R.id.button_appBar, R.id.button_animation,R.id.button_databinding})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -73,6 +76,10 @@ public class MainActivity extends Activity {
                 break;
             case R.id.button_animation:
                 intent = new Intent(MainActivity.this, PropertyAnimationActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_databinding:
+                intent = new Intent(MainActivity.this, FirstActivity.class);
                 startActivity(intent);
                 break;
         }
