@@ -5,20 +5,78 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import com.example.dongpeng.myapplication.android_js.Android_JS_Activity;
 import com.example.dongpeng.myapplication.animation.PropertyAnimationActivity;
 import com.example.dongpeng.myapplication.appbar.NestedActivity;
 import com.example.dongpeng.myapplication.bottomsheet.BottomSheetActivity;
+import com.example.dongpeng.myapplication.eventbus.FirstActivity;
 import com.example.dongpeng.myapplication.fresco.FrescoActivity;
 import com.example.dongpeng.myapplication.immergestate.ImmergestateActivity;
 import com.example.dongpeng.myapplication.rxjava.activity.RxBusActivity;
 import com.example.dongpeng.myapplication.tab_viewpager.Tab_ViewPager_Activity;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends Activity {
+    //    private static final String LOG_TAG = "WebViewDemo";
+//
+//    private WebView mWebView;
+//
+//    private Handler mHandler = new Handler();
+//
+//    @Override
+//    public void onCreate(Bundle icicle) {
+//        super.onCreate(icicle);
+//        setContentView(R.layout.web_lay);
+//        mWebView = (WebView) findViewById(R.id.webView);
+//
+//        WebSettings webSettings = mWebView.getSettings();
+//        webSettings.setSavePassword(false);
+//        webSettings.setSaveFormData(false);
+//        webSettings.setJavaScriptEnabled(true);
+//        webSettings.setSupportZoom(false);
+//
+//        mWebView.setWebChromeClient(new MyWebChromeClient());
+//
+//        mWebView.addJavascriptInterface(new DemoJavaScriptInterface(), "demo");
+//
+//        mWebView.loadUrl("file:///android_asset/index.html");
+//    }
+//
+//
+//    final class DemoJavaScriptInterface {
+//
+//        DemoJavaScriptInterface() {
+//        }
+//
+//        /**
+//         * This is not called on the UI thread. Post a runnable to invoke
+//         * loadUrl on the UI thread.
+//         */
+//        @JavascriptInterface
+//        public void clickOnAndroid() {
+//            mHandler.post(new Runnable() {
+//                public void run() {
+//                    mWebView.loadUrl("javascript:wave(1111)");
+//                }
+//            });
+//
+//        }
+//    }
+//
+//    /**
+//     * Provides a hook for calling "alert" from javascript. Useful for
+//     * debugging your javascript.
+//     */
+//    final class MyWebChromeClient extends WebChromeClient {
+//        @Override
+//        public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+//            Log.d(LOG_TAG, message);
+//            result.confirm();
+//            return true;
+//        }
+//    }
     @BindView(R.id.button_tab)
     Button button_tab;
     @BindView(R.id.button_rx)
@@ -33,6 +91,10 @@ public class MainActivity extends Activity {
     Button buttonAppBar;
     @BindView(R.id.button_animation)
     Button buttonAnimation;
+    @BindView(R.id.button_databinding)
+    Button buttonDatabinding;
+    @BindView(R.id.button_js)
+    Button buttonJs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +105,7 @@ public class MainActivity extends Activity {
 
 
     @OnClick({R.id.button_tab, R.id.button_rx, R.id.button_fresco, R.id.button_immergestate, R.id.button_bottomdialog,
-            R.id.button_appBar,R.id.button_animation})
+            R.id.button_appBar, R.id.button_animation, R.id.button_databinding,R.id.button_js})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -73,6 +135,14 @@ public class MainActivity extends Activity {
                 break;
             case R.id.button_animation:
                 intent = new Intent(MainActivity.this, PropertyAnimationActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_databinding:
+                intent = new Intent(MainActivity.this, FirstActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_js:
+                intent = new Intent(MainActivity.this, Android_JS_Activity.class);
                 startActivity(intent);
                 break;
         }
