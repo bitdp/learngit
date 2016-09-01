@@ -58,6 +58,8 @@ public class LoginActivity extends Activity implements ILoginView {
 
     @Override
     public void onLoginResult(String name ,String age) {
+        etName.setText(name);
+        etAge.setText(age);
         Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
     }
 

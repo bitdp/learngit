@@ -25,10 +25,10 @@ public class ILoginPresenterCompl implements ILoginPresenter {
 
     @Override
     public void loginResult(String name,String age) {
-        iGetUser.getUserInfo(new OnUserInfoListener() {
+        iGetUser.getUserInfo(name,new OnUserInfoListener() {
             @Override
             public void getUserInfoSuccess(User user) {
-                iLoginView.onLoginResult("","");
+                iLoginView.onLoginResult(user.getName(),user.getAge());
             }
 
             @Override
@@ -36,10 +36,5 @@ public class ILoginPresenterCompl implements ILoginPresenter {
                 iLoginView.loginFailed();
             }
         });
-//        if (name.equals("zhangsan")&&age.equals("111")){
-//
-//        }else{
-//
-//        }
     }
 }
