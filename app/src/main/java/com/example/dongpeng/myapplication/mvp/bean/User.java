@@ -1,4 +1,4 @@
-package com.example.dongpeng.myapplication.mvp.modle;
+package com.example.dongpeng.myapplication.mvp.bean;
 
 /**
  * Created by dongpeng on 2016/9/1.
@@ -6,6 +6,11 @@ package com.example.dongpeng.myapplication.mvp.modle;
 public class User {
     String name;
     String age;
+
+    public User(String name, String age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public String getName() {
         return name;
