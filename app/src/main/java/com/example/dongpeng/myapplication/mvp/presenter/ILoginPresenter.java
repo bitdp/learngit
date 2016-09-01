@@ -5,5 +5,5 @@ package com.example.dongpeng.myapplication.mvp.presenter;
  */
 public interface ILoginPresenter {
     void clearText();
-    void loginResult(String name,String age);
+    void getLoginResult(String name,String age);
 }

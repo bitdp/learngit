@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.dongpeng.myapplication.R;
 import com.example.dongpeng.myapplication.mvp.presenter.ILoginPresenter;
-import com.example.dongpeng.myapplication.mvp.presenter.ILoginPresenterCompl;
+import com.example.dongpeng.myapplication.mvp.presenter.LoginPresenterCompl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,7 +34,7 @@ public class LoginActivity extends Activity implements ILoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_lay);
         ButterKnife.bind(this);
-        presenter = new ILoginPresenterCompl(this);
+        presenter = new LoginPresenterCompl(this);
     }
 
 
@@ -45,7 +45,7 @@ public class LoginActivity extends Activity implements ILoginView {
                 presenter.clearText();
                 break;
             case R.id.button_login:
-                presenter.loginResult(etName.getText().toString(),etAge.getText().toString());
+                presenter.getLoginResult(etName.getText().toString(),etAge.getText().toString());
                 break;
         }
     }

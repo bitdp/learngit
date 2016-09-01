@@ -24,7 +24,7 @@ public class LoginPresenterCompl implements ILoginPresenter {
     }
 
     @Override
-    public void loginResult(String name,String age) {
+    public void getLoginResult(String name,String age) {
         iGetUser.getUserInfo(name,new OnUserInfoListener() {
             @Override
             public void getUserInfoSuccess(User user) {
