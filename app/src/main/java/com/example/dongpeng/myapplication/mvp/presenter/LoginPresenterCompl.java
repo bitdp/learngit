@@ -9,11 +9,11 @@ import com.example.dongpeng.myapplication.mvp.view.ILoginView;
 /**
  * Created by dongpeng on 2016/9/1.
  */
-public class ILoginPresenterCompl implements ILoginPresenter {
+public class LoginPresenterCompl implements ILoginPresenter {
     ILoginView iLoginView;
     IGetUser iGetUser;
 
-    public ILoginPresenterCompl(ILoginView iLoginView) {
+    public LoginPresenterCompl(ILoginView iLoginView) {
         this.iLoginView = iLoginView;
         iGetUser=new GetUserInfo();
     }
