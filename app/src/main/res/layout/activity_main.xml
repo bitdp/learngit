@@ -79,5 +79,9 @@
             android:layout_height="wrap_content"
             android:text="简单mvp模式"
             android:textAllCaps="false" />
+        <com.example.dongpeng.myapplication.customview.TemperatureView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
     </LinearLayout>
 </ScrollView>
