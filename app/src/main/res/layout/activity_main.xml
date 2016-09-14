@@ -51,11 +51,37 @@
             android:layout_height="wrap_content"
             android:text="AppBar+TabLayout+ViewPager"
             android:textAllCaps="false" />
-    <Button
+
+        <Button
             android:id="@+id/button_animation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="属性动画"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_databinding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EventBus"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_js"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android+JS交互"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/button_mvp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单mvp模式"
+            android:textAllCaps="false" />
+        <com.example.dongpeng.myapplication.customview.TemperatureView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
     </LinearLayout>
 </ScrollView>

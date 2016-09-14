@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dongpeng.myapplication">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -42,6 +44,18 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".animation.PropertyAnimationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventbus.FirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventbus.SecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".android_js.Android_JS_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mvp.view.LoginActivity"
             android:screenOrientation="portrait" />
     </application>
 

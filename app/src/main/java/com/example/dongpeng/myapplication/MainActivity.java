@@ -3,14 +3,18 @@ package com.example.dongpeng.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.dongpeng.myapplication.android_js.Android_JS_Activity;
 import com.example.dongpeng.myapplication.animation.PropertyAnimationActivity;
 import com.example.dongpeng.myapplication.appbar.NestedActivity;
 import com.example.dongpeng.myapplication.bottomsheet.BottomSheetActivity;
+import com.example.dongpeng.myapplication.eventbus.FirstActivity;
 import com.example.dongpeng.myapplication.fresco.FrescoActivity;
 import com.example.dongpeng.myapplication.immergestate.ImmergestateActivity;
+import com.example.dongpeng.myapplication.mvp.view.LoginActivity;
 import com.example.dongpeng.myapplication.rxjava.activity.RxBusActivity;
 import com.example.dongpeng.myapplication.tab_viewpager.Tab_ViewPager_Activity;
 
@@ -33,6 +37,12 @@ public class MainActivity extends Activity {
     Button buttonAppBar;
     @BindView(R.id.button_animation)
     Button buttonAnimation;
+    @BindView(R.id.button_databinding)
+    Button buttonDatabinding;
+    @BindView(R.id.button_js)
+    Button buttonJs;
+    @BindView(R.id.button_mvp)
+    Button buttonMvp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +53,7 @@ public class MainActivity extends Activity {
 
 
     @OnClick({R.id.button_tab, R.id.button_rx, R.id.button_fresco, R.id.button_immergestate, R.id.button_bottomdialog,
-            R.id.button_appBar,R.id.button_animation})
+            R.id.button_appBar, R.id.button_animation, R.id.button_databinding, R.id.button_js,R.id.button_mvp})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -75,7 +85,24 @@ public class MainActivity extends Activity {
                 intent = new Intent(MainActivity.this, PropertyAnimationActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.button_databinding:
+                intent = new Intent(MainActivity.this, FirstActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_js:
+                intent = new Intent(MainActivity.this, Android_JS_Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_mvp:
+                intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e("onDestroy","onDestroyonDestroy");
+    }
 }

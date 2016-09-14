@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
+
 import com.cocosw.bottomsheet.BottomSheet;
 import com.example.dongpeng.myapplication.R;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,6 +31,10 @@ public class BottomSheetActivity extends Activity {
 
     @OnClick(R.id.button)
     public void onClick() {
+/*        系统自带
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
+        dialog.setContentView(LayoutInflater.from(this).inflate(R.layout.activity_main,null));
+        dialog.show();*/
         BottomSheet.Builder builder = new BottomSheet.Builder(BottomSheetActivity.this);
         builder.title("选择城市").icon(R.mipmap.a).sheet(R.menu.bottom_menu).listener(new MenuItem.OnMenuItemClickListener() {
             @Override
