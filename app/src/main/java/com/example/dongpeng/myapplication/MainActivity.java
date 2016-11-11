@@ -16,6 +16,7 @@ import com.example.dongpeng.myapplication.fresco.FrescoActivity;
 import com.example.dongpeng.myapplication.immergestate.ImmergestateActivity;
 import com.example.dongpeng.myapplication.mvp.view.LoginActivity;
 import com.example.dongpeng.myapplication.rxjava.activity.RxBusActivity;
+import com.example.dongpeng.myapplication.spannablestring.SpannableStringActivity;
 import com.example.dongpeng.myapplication.tab_viewpager.Tab_ViewPager_Activity;
 
 import butterknife.BindView;
@@ -43,6 +44,8 @@ public class MainActivity extends Activity {
     Button buttonJs;
     @BindView(R.id.button_mvp)
     Button buttonMvp;
+    @BindView(R.id.button_span)
+    Button buttonSpan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +56,7 @@ public class MainActivity extends Activity {
 
 
     @OnClick({R.id.button_tab, R.id.button_rx, R.id.button_fresco, R.id.button_immergestate, R.id.button_bottomdialog,
-            R.id.button_appBar, R.id.button_animation, R.id.button_databinding, R.id.button_js,R.id.button_mvp})
+            R.id.button_appBar, R.id.button_animation, R.id.button_databinding, R.id.button_js, R.id.button_mvp, R.id.button_span})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -97,12 +100,16 @@ public class MainActivity extends Activity {
                 intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.button_span:
+                intent = new Intent(MainActivity.this, SpannableStringActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e("onDestroy","onDestroyonDestroy");
+        Log.e("onDestroy", "onDestroyonDestroy");
     }
 }

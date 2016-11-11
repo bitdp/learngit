@@ -79,6 +79,12 @@
             android:layout_height="wrap_content"
             android:text="简单mvp模式"
             android:textAllCaps="false" />
+        <Button
+            android:id="@+id/button_span"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SpannableString"
+            android:textAllCaps="false" />
         <com.example.dongpeng.myapplication.customview.TemperatureView
             android:layout_gravity="center_horizontal"
             android:layout_width="100dp"

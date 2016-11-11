@@ -57,6 +57,9 @@
         <activity
             android:name=".mvp.view.LoginActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".spannablestring.SpannableStringActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
