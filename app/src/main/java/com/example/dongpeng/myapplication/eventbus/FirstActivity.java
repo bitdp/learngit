@@ -32,6 +32,7 @@ public class FirstActivity extends Activity {
         setContentView(R.layout.getevent_lay);
         ButterKnife.bind(this);
         EventBus.getDefault().register(this);
+
     }
 
     /**

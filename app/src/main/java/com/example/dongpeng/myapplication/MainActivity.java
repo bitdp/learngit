@@ -2,7 +2,9 @@ package com.example.dongpeng.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +48,8 @@ public class MainActivity extends Activity {
     Button buttonMvp;
     @BindView(R.id.button_span)
     Button buttonSpan;
+    @BindView(R.id.button_activity)
+    Button buttonActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +58,9 @@ public class MainActivity extends Activity {
         ButterKnife.bind(this);
     }
 
-
     @OnClick({R.id.button_tab, R.id.button_rx, R.id.button_fresco, R.id.button_immergestate, R.id.button_bottomdialog,
-            R.id.button_appBar, R.id.button_animation, R.id.button_databinding, R.id.button_js, R.id.button_mvp, R.id.button_span})
+            R.id.button_appBar, R.id.button_animation, R.id.button_databinding, R.id.button_js, R.id.button_mvp, R.id.button_span,
+            R.id.button_activity})
     public void onClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -103,6 +107,14 @@ public class MainActivity extends Activity {
             case R.id.button_span:
                 intent = new Intent(MainActivity.this, SpannableStringActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.button_activity:
+                intent = new Intent(MainActivity.this, ImmergestateActivity.class);
+                if(Build.VERSION.SDK_INT>Build.VERSION_CODES.JELLY_BEAN){
+                    startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this,buttonActivity,"buttonActivity").toBundle());
+                }else{
+                    startActivity(intent);
+                }
                 break;
         }
     }
